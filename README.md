@@ -9,7 +9,7 @@ A web application for managing cruise ship operations, allowing voyagers to orde
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact Information](#contact-information)
+- [Contact Information](#contact)
 
 ## Features
 - **Order Catering Items:** Enable voyagers to order snacks, food, and beverages.
