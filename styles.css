@@ -1,6 +1,7 @@
 /* styles.css */
 body {
   margin: 0;
+  padding: 24px;
   font-family: Arial, sans-serif;
   background: #f0f0f0;
 }
@@ -10,7 +11,7 @@ header {
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,6 +27,7 @@ header {
 
 .nav-brand {
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 .nav-links {
@@ -121,7 +123,6 @@ footer {
   background: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
-  padding: 10px 0;
   position: fixed;
   bottom: 0;
   left: 0;
