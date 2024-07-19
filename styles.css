@@ -1,7 +1,7 @@
 /* styles.css */
 body {
   margin: 0;
-  padding: 24px;
+  padding: 24px; /*food**/
   font-family: Arial, sans-serif;
   background: #f0f0f0;
 }
@@ -129,3 +129,23 @@ footer {
   left: 0;
   z-index: 1;
 }
+
+/*f-s*/
+#summary {
+  margin-top: 40px;
+}
+
+#order-summary {
+  list-style: none;
+  padding: 0;
+}
+
+#order-summary li {
+  margin-bottom: 10px;
+}
+
+#total-amount {
+  font-weight: bold;
+  margin-top: 20px;
+}
+/*f-e*/

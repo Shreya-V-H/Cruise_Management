@@ -97,5 +97,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **shriya** - [your-email@example.com](mailto:your-email@example.com)
+- **Shreya V H** - [shreyavh0320@gmail.com](mailto:your-email@example.com)
 - [GitHub](https://github.com/Shreya-V-H)
