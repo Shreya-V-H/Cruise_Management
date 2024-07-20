@@ -87,7 +87,7 @@ h1, h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
-.cardm {max-width: 200px;}
+
 
 .card:hover {
   transform: translateY(-10px);
