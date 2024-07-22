@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationary Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Cruise Ship Management</div>
+            <ul class="nav-links">
+                <li><a href="#stationary">Stationary</a></li>
+                <li><a href="#gift">Gifts</a></li>
+                <li><a href="#chocolates">Chocolates</a></li>
+                <li><a href="#books">Books</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="stationary">
+            <h2>Stationary Items</h2>
+            <div class="card-grid" >
+            
+                <div class="card">
+                    <img src=Images\stationary\crayons.jpg alt="crayons">
+                    <button onclick="addItem('Crayons', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\colourful-pencil.webp alt="pens">
+                    <button onclick="addItem('Pens', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\books.jpg alt="books">
+                    <button onclick="addItem('Books', 10)">Add Item</button>
+                </div>          
+             </div>
+
+        </section>
+        <section id="gift">
+            <h2>Gifts Items</h2>
+            <div class="card-grid" >
+                <div class="card">
+                    <img src=Images\stationary\bouquet.jpg alt="bouquet">
+                    <button onclick="addItem('Gift 1', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\gift\teddy.jpg alt="teddy">
+                    <button onclick="addItem('Gift 2', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\gift\keychain.jpg alt="key chain">
+                    <button onclick="addItem('Gift 3', 10)">Add Item</button>
+                </div> 
+                <div class="card">
+                    <img src=Images\stationary\gift\-mugs.webp alt="mugs">
+                    <button onclick="addItem('Gift 4', 10)">Add Item</button>
+                </div>        
+                <div class="card">
+                    <img src=Images\stationary\gift\perfume.webp alt="perfume">
+                    <button onclick="addItem('Gift 5', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\gift\bag.webp alt="bag">
+                    <button onclick="addItem('Gift 6', 10)">Add Item</button>
+                </div>
+             </div>
+
+        </section>
+
+        <section id="chocolates">
+            <h2>Chocolates Items</h2>
+            <div class="card-grid">
+                
+                <div class="card">
+                    <img src=Images\stationary\chocolate\chocolate-box.avif alt="chocolate">
+                    <button onclick="addItem('Chocolate 1', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\chocolate\dairymilk.jpg alt="chocolate">
+                    <button onclick="addItem('Chocolate 2', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\chocolate\fuse.avif alt="chocolate">
+                    <button onclick="addItem('Chocolate 3', 10)">Add Item</button>
+
+                </div>
+
+             </div>
+
+        </section>
+        <section id="books">
+            <h2>Books Items</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src=Images\stationary\talebooks\cinderella.jpeg alt="cinderella">
+                    <button onclick="addItem('Book 1', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\talebooks\dragons.jpg alt="dragons">
+                    <button onclick="addItem('Book 2', 10)">Add Item</button>
+                </div>
+                <div class="card">
+                    <img src=Images\stationary\talebooks\grimm.jpg alt="grimm">
+                    <button onclick="addItem('Book 3', 10)">Add Item</button>
+                </div>
+                
+
+             </div>
+
+        </section>
+        <section id="summary">
+            <h2>Order Summary</h2>
+            <ul id="order-summary"></ul>
+            <p id="total-amount"></p>
+            <button id="order-stationary-btn" onclick="order()">Order Stationary</button>
+            <p id="order-success-message" style="display: none;">Your order is successful!</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+
+
+
+        
+
+</body>
+</html>
