@@ -4,115 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stationary Page</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="nav-brand">Cruise Ship Management</div>
             <ul class="nav-links">
+                <li><a href="/">Home</a></li>
                 <li><a href="#stationary">Stationary</a></li>
                 <li><a href="#gift">Gifts</a></li>
                 <li><a href="#chocolates">Chocolates</a></li>
                 <li><a href="#books">Books</a></li>
-
             </ul>
         </nav>
+        
     </header>
 
     <div class="container">
         <section id="stationary">
             <h2>Stationary Items</h2>
-            <div class="card-grid" >
-            
+            <div class="card-grid">
                 <div class="card">
-                    <img src=Images\stationary\crayons.jpg alt="crayons">
+                    <img src="{{ url_for('static', filename='images/stationary/crayons.jpg') }}" alt="Crayons">
                     <button onclick="addItem('Crayons', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\colourful-pencil.webp alt="pens">
+                    <img src="{{ url_for('static', filename='images/stationary/colourful-pencil.webp') }}" alt="Pens">
                     <button onclick="addItem('Pens', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\books.jpg alt="books">
+                    <img src="{{ url_for('static', filename='images/stationary/books.jpg') }}" alt="Books">
                     <button onclick="addItem('Books', 10)">Add Item</button>
-                </div>          
-             </div>
-
+                </div>
+            </div>
         </section>
         <section id="gift">
-            <h2>Gifts Items</h2>
-            <div class="card-grid" >
+            <h2>Gift Items</h2>
+            <div class="card-grid">
                 <div class="card">
-                    <img src=Images\stationary\bouquet.jpg alt="bouquet">
+                    <img src="{{ url_for('static', filename='images/stationary/bouquet.jpg') }}" alt="Bouquet">
                     <button onclick="addItem('Gift 1', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\gift\teddy.jpg alt="teddy">
+                    <img src="{{ url_for('static', filename='images/stationary/gift/teddy.jpg') }}" alt="Teddy">
                     <button onclick="addItem('Gift 2', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\gift\keychain.jpg alt="key chain">
+                    <img src="{{ url_for('static', filename='images/stationary/gift/keychain.jpg') }}" alt="Key Chain">
                     <button onclick="addItem('Gift 3', 10)">Add Item</button>
-                </div> 
+                </div>
                 <div class="card">
-                    <img src=Images\stationary\gift\-mugs.webp alt="mugs">
+                    <img src="{{ url_for('static', filename='images/stationary/gift/mugs.webp') }}" alt="Mugs">
                     <button onclick="addItem('Gift 4', 10)">Add Item</button>
-                </div>        
+                </div>
                 <div class="card">
-                    <img src=Images\stationary\gift\perfume.webp alt="perfume">
+                    <img src="{{ url_for('static', filename='images/stationary/gift/perfume.webp') }}" alt="Perfume">
                     <button onclick="addItem('Gift 5', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\gift\bag.webp alt="bag">
+                    <img src="{{ url_for('static', filename='images/stationary/gift/bag.webp') }}" alt="Bag">
                     <button onclick="addItem('Gift 6', 10)">Add Item</button>
                 </div>
-             </div>
-
+            </div>
         </section>
 
         <section id="chocolates">
-            <h2>Chocolates Items</h2>
+            <h2>Chocolate Items</h2>
             <div class="card-grid">
-                
                 <div class="card">
-                    <img src=Images\stationary\chocolate\chocolate-box.avif alt="chocolate">
+                    <img src="{{ url_for('static', filename='images/stationary/chocolate/chocolate-box.avif') }}" alt="Chocolate Box">
                     <button onclick="addItem('Chocolate 1', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\chocolate\dairymilk.jpg alt="chocolate">
+                    <img src="{{ url_for('static', filename='images/stationary/chocolate/dairymilk.jpg') }}" alt="Dairy Milk">
                     <button onclick="addItem('Chocolate 2', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\chocolate\fuse.avif alt="chocolate">
+                    <img src="{{ url_for('static', filename='images/stationary/chocolate/fuse.avif') }}" alt="Fuse">
                     <button onclick="addItem('Chocolate 3', 10)">Add Item</button>
-
                 </div>
-
-             </div>
-
+            </div>
         </section>
+
         <section id="books">
-            <h2>Books Items</h2>
+            <h2>Book Items</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src=Images\stationary\talebooks\cinderella.jpeg alt="cinderella">
+                    <img src="{{ url_for('static', filename='images/stationary/talebooks/cinderella.jpeg') }}" alt="Cinderella">
                     <button onclick="addItem('Book 1', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\talebooks\dragons.jpg alt="dragons">
+                    <img src="{{ url_for('static', filename='images/stationary/talebooks/dragons.jpg') }}" alt="Dragons">
                     <button onclick="addItem('Book 2', 10)">Add Item</button>
                 </div>
                 <div class="card">
-                    <img src=Images\stationary\talebooks\grimm.jpg alt="grimm">
+                    <img src="{{ url_for('static', filename='images/stationary/talebooks/grimm.jpg') }}" alt="Grimm">
                     <button onclick="addItem('Book 3', 10)">Add Item</button>
                 </div>
-                
-
-             </div>
-
+            </div>
         </section>
+
         <section id="summary">
             <h2>Order Summary</h2>
             <ul id="order-summary"></ul>
@@ -121,14 +113,11 @@
             <p id="order-success-message" style="display: none;">Your order is successful!</p>
         </section>
     </div>
+
     <footer>
         <p>&copy; 2023. All rights reserved.</p>
     </footer>
-    <script src="app.js"></script>
 
-
-
-        
-
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

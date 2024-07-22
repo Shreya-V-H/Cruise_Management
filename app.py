@@ -13,7 +13,7 @@ def order_food():
 
 @app.route('/order-stationery')
 def order_stationery():
-    return render_template('order_stationery.html')
+    return render_template('book_stationery.html')
 
 
 @app.route('/book-resort')
