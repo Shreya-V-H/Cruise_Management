@@ -40,8 +40,7 @@
       <div class="card" id="book-movie">
         <h2>Book Movie Tickets</h2>
         <img src="{{ url_for('static', filename='Images/movie/movie4.webp') }}" alt="Movie">
-        <!-- Use a direct link to Streamlit app -->
-        <a href="http://localhost:8501" target="_blank"><button type="button">Book Now</button></a>
+        <a href="{{ url_for('movie') }}"><button type="button">Book</button></a>
       </div>
 
       <div class="card" id="book-resort">
