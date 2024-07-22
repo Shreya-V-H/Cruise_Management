@@ -21,7 +21,7 @@ function updateSummary() {
   totalAmountElement.textContent = `Total Amount: $${totalAmount}`;
 }
 
-function orderFood() {
+function order() {
   const successMessageElement = document.getElementById('order-success-message');
   successMessageElement.style.display = 'block';
 }
