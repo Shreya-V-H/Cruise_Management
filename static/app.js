@@ -1,12 +1,12 @@
-/**f-s */
-let orderSummary = [];  
-let totalAmount = 0;   
+let orderSummary = [];
+let totalAmount = 0;
 
 function addItem(item, price) {
   orderSummary.push({ item, price });
   totalAmount += price;
   updateSummary();
 }
+
 function updateSummary() {
   const summaryElement = document.getElementById('order-summary');
   const totalAmountElement = document.getElementById('total-amount');
@@ -25,5 +25,3 @@ function orderFood() {
   const successMessageElement = document.getElementById('order-success-message');
   successMessageElement.style.display = 'block';
 }
-
-/**f-e */

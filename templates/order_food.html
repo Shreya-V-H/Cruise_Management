@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order - Cruise Ship Management</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">Cruise Ship Management</div>
+      <ul class="nav-links">
+        <li><a href="#breakfast">Breakfast</a></li>
+        <li><a href="#lunch">Lunch</a></li>
+        <li><a href="#snacks">Snacks</a></li>
+        <li><a href="#dinner">Dinner</a></li>
+        <li><a href="#beverages">Beverages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Food Order</h1>
+
+    <section id="breakfast">
+      <h2>Breakfast Items</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/adobo-rice.avif') }}" alt="Adobo Rice">
+          <button onclick="addItem('Adobo Rice', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/fruit bowl.jpg') }}" alt="Fruit Bowl">
+          <button onclick="addItem('Fruit Bowl', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/idli.jpg') }}" alt="Idli">
+          <button onclick="addItem('Idli', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/masala-dosa.jpg') }}" alt="Masala Dosa">
+          <button onclick="addItem('Masala Dosa', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/oatmeal.jpg') }}" alt="Oatmeal">
+          <button onclick="addItem('Oatmeal', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/omelette.jpeg') }}" alt="Omelette">
+          <button onclick="addItem('Omelette', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/pancakes.jpg') }}" alt="Pancakes">
+          <button onclick="addItem('Pancakes', 10)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/breakfast/sandwich.jpg') }}" alt="Sandwich">
+          <button onclick="addItem('Sandwich', 10)">Add Food</button>
+        </div>
+      </div>
+    </section>
+    <section id="lunch">
+      <h2>Lunch Items</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/beef.jpg') }}" alt="Beef">
+          <button onclick="addItem('Beef', 15)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/briyani.jpg') }}" alt="Briyani">
+          <button onclick="addItem('Briyani', 15)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/dal.jpg') }}" alt="Dal">
+          <button onclick="addItem('Dal', 15)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/food.png') }}" alt="Food">
+          <button onclick="addItem('Food', 15)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/fried-eggs.jpg') }}" alt="Fried Eggs">
+          <button onclick="addItem('Fried Eggs', 15)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/manchurian.jpg') }}" alt="Manchurian">
+          <button onclick="addItem('Manchurian', 15)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/lunch/soup.jpg') }}" alt="Soup">
+          <button onclick="addItem('Soup', 15)">Add Food</button>
+        </div>
+          <div class="card">
+            <img src="{{ url_for('static', filename='images/food/lunch/soup.webp') }}" alt="Soup">
+          <button onclick="addItem('Soup', 15)">Add Food</button>
+          </div>
+          <div class="card">
+            <img src="{{ url_for('static', filename='images/food/lunch/manchurian.jpg') }}" alt="Soup">
+          <button onclick="addItem('manchurian', 15)">Add Food</button>
+          </div>
+      </div>
+    </section>
+
+    <section id="snacks">
+      <h2>Snacks Items</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/brownie.jpg') }}" alt="Brownie">
+          <button onclick="addItem('Brownie', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/burger.jpg') }}" alt="Burger">
+          <button onclick="addItem('Burger', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/cake.jpg') }}" alt="Cake">
+          <button onclick="addItem('Cake', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/chat.jpg') }}" alt="Chat">
+          <button onclick="addItem('Chat', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/choco cake.jpg') }}" alt="Choco Cake">
+          <button onclick="addItem('Choco Cake', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/crispy-french-fries.jpg') }}" alt="French Fries">
+          <button onclick="addItem('French Fries', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/ice-cream.jpg') }}" alt="Ice Cream">
+          <button onclick="addItem('Ice Cream', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/pani puri.jpg') }}" alt="Pani Puri">
+          <button onclick="addItem('Pani Puri', 5)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/snaks/pizza.jpg') }}" alt="Pizza">
+          <button onclick="addItem('Pizza', 5)">Add Food</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="dinner">
+      <h2>Dinner Items</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/chicken-and-prosciutto-parmigiana.jpeg') }}" alt="Chicken and Prosciutto Parmigiana">
+          <button onclick="addItem('Chicken and Prosciutto Parmigiana', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/delish-tuscan-tortellini.jpeg') }}" alt="Delish Tuscan Tortellini">
+          <button onclick="addItem('Delish Tuscan Tortellini', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/food.png') }}" alt="Food">
+          <button onclick="addItem('Food', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/lemon-pasta.jpg') }}" alt="Lemon Pasta">
+          <button onclick="addItem('Lemon Pasta', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/rice.jpg') }}" alt="Rice">
+          <button onclick="addItem('Rice', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/salad.jpg') }}" alt="Salad">
+          <button onclick="addItem('Salad', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/thali.jpg') }}" alt="Thali">
+          <button onclick="addItem('Thali', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/food.png') }}" alt="Food">
+          <button onclick="addItem('Food', 20)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/dinner/rice.jpg') }}" alt="Rice">
+          <button onclick="addItem('Rice', 20)">Add Food</button>
+        </div>
+      </div>
+    </section>
+    
+    <section id="beverages">
+      <h2>Beverages Items</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/Blue-Lagoon-Mocktail.jpg') }}" alt="Blue Lagoon Mocktail">
+          <button onclick="addItem('Blue Lagoon Mocktail', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/chocolate.jpg') }}" alt="Chocolate">
+          <button onclick="addItem('Chocolate', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/coffee.jpg') }}" alt="Coffee">
+          <button onclick="addItem('Coffee', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/fruit juice.jpg') }}" alt="Fruit Juice">
+          <button onclick="addItem('Fruit Juice', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/lemon tea.jpg') }}" alt="Lemon Tea">
+          <button onclick="addItem('Lemon Tea', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/liquid.jpg') }}" alt="Liquid">
+          <button onclick="addItem('Liquid', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/orange.jpg') }}" alt="Orange Juice">
+          <button onclick="addItem('Orange Juice', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/strawberry shake.jpg') }}" alt="Strawberry Shake">
+          <button onclick="addItem('Strawberry Shake', 8)">Add Food</button>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/food/beverages/liquid.jpg') }}" alt="Liquid">
+          <button onclick="addItem('Liquid', 8)">Add Food</button>
+        </div>
+      </div>
+    </section>
+    
+    <section id="summary">
+      <h2>Order Summary</h2>
+      <ul id="order-summary"></ul>
+      <p id="total-amount"></p>
+      <button id="order-food-btn" onclick="orderFood()">Order Food</button>
+      <p id="order-success-message" style="display: none;">Your order is successful!</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Cruise Ship Management. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
