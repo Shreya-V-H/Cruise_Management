@@ -16,6 +16,11 @@ def order_stationery():
     return render_template('book_stationery.html')
 
 
+@app.route('/book-beauty')
+def book_beauty():
+    return render_template('book_beauty.html')
+
+
 @app.route('/book-resort')
 def book_resort():
     return render_template('book_resort.html')

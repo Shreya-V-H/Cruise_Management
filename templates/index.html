@@ -25,6 +25,7 @@
   <div class="container">
     <h1>Voyager Module</h1>
     <div class="card-grid">
+
       <div class="card" id="order-catering">
         <h2>Order Catering Items</h2>
         <img src="{{ url_for('static', filename='Images/food/main/food.png') }}" alt="Food">
@@ -55,11 +56,18 @@
         <a href="{{ url_for('book_fitness') }}"><button type="button">Book</button></a>
       </div>
 
+      <div class="card" id="book-beauty">
+        <h2>Beauty parlour</h2>
+        <img src="{{ url_for('static', filename='Images/beauty/beauty.jpg') }}" alt="Fitness">
+        <a href="{{ url_for('book_beauty') }}"><button type="button">Book</button></a>
+      </div>
+
       <div class="card" id="book-party-hall">
         <h2>Book Party Hall</h2>
         <img src="{{ url_for('static', filename='Images/party/party hall 1.jpg') }}" alt="Party Hall">
         <a href="{{ url_for('book_party_hall') }}"><button type="button">Book</button></a>
       </div>
+      
     </div>
   </div>
 
