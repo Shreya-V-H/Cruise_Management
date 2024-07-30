@@ -1,45 +1,29 @@
-/* General Styles */
+/* styles.css */
 body {
   margin: 0;
-  padding: 0;
+  padding: 24px; /*food**/
   font-family: Arial, sans-serif;
   background: #f0f0f0;
 }
-header, footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
+
+header {
   width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
   left: 0;
   z-index: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  top: 0;
-}
-
-footer {
-  bottom: 0;
-}
-
 .navbar {
   display: flex;
-  justify-content: center; /* Center links horizontally */
-  align-items: center; /* Center links vertically */
-  gap: 20px; /* Space between links */
-  padding: 10px 0; /* Padding for the navbar */
-  background-color: #333; /* Ensure the navbar background matches header */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 16px; /* Padding inside each link */
-  white-space: nowrap; /* Prevent links from wrapping to the next line */
-}
 .nav-brand {
   font-size: 1.5em;
   font-weight: bold;
@@ -51,11 +35,20 @@ footer {
   margin: 0;
   padding: 0;
 }
-.navbar a:hover {
-  background-color: #555; /* Background color on hover */
-  border-radius: 5px; /* Optional: rounded corners on hover */
+
+.nav-links li {
+  margin: 0 15px;
 }
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
 
 .container {
   display: flex;
@@ -71,11 +64,11 @@ footer {
   z-index: 1;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
-/* Card Styles for Index Page */
 .card-grid {
   display: flex;
   flex-wrap: wrap;
@@ -93,12 +86,8 @@ h1, h2 {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.card img {
-  width: 250px; /* Set your desired width */
-  height: 180px; /* Set your desired height */
-  object-fit: cover; /* Ensures the image covers the area */
-  border-radius: 10px;
+.cardm {
+  max-width: 200px;
 }
 
 .card:hover {
@@ -106,7 +95,12 @@ h1, h2 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Button Styles */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 button {
   background-color: #007bff;
   color: white;
@@ -121,12 +115,22 @@ button {
 button:active {
   transform: translateY(3px);
 }
-
 button:hover {
   background-color: #0056b3;
 }
 
-/* Order Summary for Index Page */
+footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/*f-s*/
 #summary {
   margin-top: 40px;
 }
@@ -144,72 +148,169 @@ button:hover {
   font-weight: bold;
   margin-top: 20px;
 }
+/*f-e*/
 
-/* Scoped Styles for Beauty Parlour Page */
-.beauty-parlour {
-  padding-top: 60px; /* Adjust based on header height */
-  padding-bottom: 60px; /* Adjust based on footer height */
-}
+/*login*/
 
-.beauty-parlour .card {
+.background-image {
   display: flex;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 20px;
-  padding: 20px;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Adjust based on your layout */
-  max-width: 1200px; /* Maximum width for larger screens */
+  height: 100vh;
+  background-image: url("{{ url_for('static', filename='Images/login/maxresdefault.jpg') }}");
+  background-size: cover;
+  background-position: center;
 }
 
-
-
-  .beauty-parlour .card img {
-  width: 150px;
-  height: 150px;
+.login {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
   border-radius: 10px;
-  margin-right: 20px;
-  object-fit: cover; /* Ensures images maintain aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
 }
 
-.beauty-parlour .card-content {
-  flex: 1;
-  
+.login h2 {
+  text-align: center;
+  color: #333;
 }
 
-.beauty-parlour .card-content h3 {
-  margin: 0;
+.login .messages {
+  color: #d9534f;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
-.beauty-parlour .card-content p {
-  margin: 10px 0;
-  text-align: left;
+.login form {
+  display: flex;
+  flex-direction: column;
 }
 
-.beauty-parlour .card-content button {
-  padding: 10px 15px;
+.login label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login button {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+.login p {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
+
+.login a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+/**/
+
+/*signup*/
+/* signup */
+.signup .background-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("{{ url_for('static', filename='your-background-image.jpg') }}")
+    no-repeat center center;
+  background-size: cover;
+}
+
+.signup .form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+}
+
+.signup h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup button {
+  width: 100%;
+  padding: 10px;
   background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.beauty-parlour .card-content button:hover {
+.signup button:hover {
   background-color: #555;
 }
 
-.beauty-parlour .order-summary {
-  margin: 20px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
+.signup .password-requirements {
+  margin-bottom: 10px;
 }
 
-.beauty-parlour .message {
-  margin: 20px;
-  color: green;
-  display: none;
+.signup .password-requirements p {
+  margin: 0 0 5px;
 }
+
+.signup .password-requirements ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.signup .password-requirements li {
+  margin-bottom: 5px;
+}
+
+.signup p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/**/

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="signup">
+      <div class="background-image">
+        <div class="form-container">
+          <h2>Sign Up</h2>
+          {% with messages = get_flashed_messages() %} {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %} {% endwith %}
+          <form action="{{ url_for('signup') }}" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <!-- Password requirements -->
+            <div class="password-requirements">
+              <p>Your password must include:</p>
+              <ul>
+                <li>At least one capital letter</li>
+                <li>Include numbers</li>
+                <li>Include special characters</li>
+              </ul>
+            </div>
+
+            <label for="reconfirm_password">Reconfirm Password:</label>
+            <input
+              type="password"
+              id="reconfirm_password"
+              name="reconfirm_password"
+              required
+            />
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required />
+
+            <button type="submit">Sign Up</button>
+          </form>
+          <p>
+            Already have an account? <a href="{{ url_for('login') }}">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
