@@ -157,7 +157,6 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("{{ url_for('static', filename='Images/login/maxresdefault.jpg') }}");
   background-size: cover;
   background-position: center;
 }
@@ -243,8 +242,6 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("{{ url_for('static', filename='your-background-image.jpg') }}")
-    no-repeat center center;
   background-size: cover;
 }
 

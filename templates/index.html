@@ -1,91 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voyager Module - Cruise Ship Management</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voyager Module - Cruise Ship Management</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-brand">Cruise Ship Management</div>
+        <ul class="nav-links">
+          <li><a href="#order-catering">Order Catering</a></li>
+          <li><a href="#order-stationery">Order Stationery</a></li>
+          <li><a href="#book-movie">Book Movie</a></li>
+          <li><a href="#book-resort">Book Resort</a></li>
+          <li><a href="#book-fitness">Book Fitness</a></li>
+          <li><a href="#book-party-hall">Book Party Hall</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-brand">Cruise Ship Management</div>
-      <ul class="nav-links">
-        <li><a href="#order-catering">Order Catering</a></li>
-        <li><a href="#order-stationery">Order Stationery</a></li>
-        <li><a href="#book-movie">Book Movie</a></li>
-        <li><a href="#book-resort">Book Resort</a></li>
-        <li><a href="#book-fitness">Book Fitness</a></li>
-        <li><a href="#book-party-hall">Book Party Hall</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <div class="container">
-    <h1>Voyager Module</h1>
-    <div class="card-grid">
+    <div class="container">
+      <h1>Voyager Module</h1>
+      <div class="card-grid">
+        <div class="card" id="order-catering">
+          <h2>Order Catering Items</h2>
+          <img
+            src="{{ url_for('static', filename='Images/food/main/food.png') }}"
+            alt="Food"
+          />
+          <a href="{{ url_for('order_food') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
 
-      <div class="card" id="order-catering">
-        <h2>Order Catering Items</h2>
-        <img src="{{ url_for('static', filename='Images/food/main/food.png') }}" alt="Food">
-        <a href="{{ url_for('order_food') }}"><button type="button">Book</button></a>
+        <div class="card" id="order-stationery">
+          <h2>Order Stationery Items</h2>
+          <img
+            src="{{ url_for('static', filename='Images/stationary/stationary1.jpg') }}"
+            alt="Stationery"
+          />
+          <a href="{{ url_for('order_stationery') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
+
+        <div class="card" id="book-movie">
+          <h2>Book Movie Tickets</h2>
+          <img
+            src="{{ url_for('static', filename='Images/movie/movie4.webp') }}"
+            alt="Movie"
+          />
+          <a href="{{ url_for('movie') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
+
+        <div class="card" id="book-resort">
+          <h2>Book Resort</h2>
+          <img
+            src="{{ url_for('static', filename='Images/resort/R.jpeg') }}"
+            alt="Resort"
+          />
+          <a href="{{ url_for('book_resort') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
+
+        <div class="card" id="book-fitness">
+          <h2>Book Fitness Center</h2>
+          <img
+            src="{{ url_for('static', filename='Images/fitness/gym.jpg') }}"
+            alt="Fitness"
+          />
+          <a href="{{ url_for('book_fitness') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
+
+        <div class="card" id="book-beauty">
+          <h2>Beauty parlour</h2>
+          <img
+            src="{{ url_for('static', filename='Images/beauty/beauty.jpg') }}"
+            alt="Fitness"
+          />
+          <a href="{{ url_for('book_beauty') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
+
+        <div class="card" id="book-party-hall">
+          <h2>Book Party Hall</h2>
+          <img
+            src="{{ url_for('static', filename='Images/party/party hall 1.jpg') }}"
+            alt="Party Hall"
+          />
+          <a href="{{ url_for('book_party_hall') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
+
+        <div class="card" id="book-party-hall">
+          <h2>Book Movie Tickets</h2>
+          <img
+            src="{{ url_for('static', filename='Images/movie/movie2.jpg') }}"
+            alt="movie"
+          />
+          <a href="{{ url_for('movie') }}"
+            ><button type="button">Book</button></a
+          >
+        </div>
       </div>
-
-      <div class="card" id="order-stationery">
-        <h2>Order Stationery Items</h2>
-        <img src="{{ url_for('static', filename='Images/stationary/stationary1.jpg') }}" alt="Stationery">
-        <a href="{{ url_for('order_stationery') }}"><button type="button">Book</button></a>
-      </div>
-
-      <div class="card" id="book-movie">
-        <h2>Book Movie Tickets</h2>
-        <img src="{{ url_for('static', filename='Images/movie/movie4.webp') }}" alt="Movie">
-        <a href="{{ url_for('movie') }}"><button type="button">Book</button></a>
-      </div>
-
-      <div class="card" id="book-resort">
-        <h2>Book Resort</h2>
-        <img src="{{ url_for('static', filename='Images/resort/R.jpeg') }}" alt="Resort">
-        <a href="{{ url_for('book_resort') }}"><button type="button">Book</button></a>
-      </div>
-
-      <div class="card" id="book-fitness">
-        <h2>Book Fitness Center</h2>
-        <img src="{{ url_for('static', filename='Images/fitness/gym.jpg') }}" alt="Fitness">
-        <a href="{{ url_for('book_fitness') }}"><button type="button">Book</button></a>
-      </div>
-
-      <div class="card" id="book-beauty">
-        <h2>Beauty parlour</h2>
-        <img src="{{ url_for('static', filename='Images/beauty/beauty.jpg') }}" alt="Fitness">
-        <a href="{{ url_for('book_beauty') }}"><button type="button">Book</button></a>
-      </div>
-
-      <div class="card" id="book-party-hall">
-        <h2>Book Party Hall</h2>
-        <img src="{{ url_for('static', filename='Images/party/party hall 1.jpg') }}" alt="Party Hall">
-        <a href="{{ url_for('book_party_hall') }}"><button type="button">Book</button></a>
-      </div>
-      
     </div>
-  </div>
 
-  <footer>
-    <p>&copy; 2024 Cruise Ship Management. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2024 Cruise Ship Management. All rights reserved.</p>
+    </footer>
 
-  <script src="{{ url_for('static', filename='app.js') }}"></script>
-</body>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
