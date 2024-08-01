@@ -52,6 +52,10 @@ def book_fitness():
 def book_party_hall():
     return render_template('book_party_hall.html')
 
+@app.route('/movie')
+def movie():
+    return render_template('movie.html')
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
