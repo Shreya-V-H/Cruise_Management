@@ -56,6 +56,10 @@ def book_fitness():
 def book_party_hall():
     return render_template('book_party_hall.html')
 
+@app.route('/book_beauty')
+def book_beauty():
+    return render_template('book_beauty.html')
+
 @app.route('/movie')
 def movie():
     return render_template('movie.html')
