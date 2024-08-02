@@ -7,19 +7,23 @@ app.secret_key = 'your_secret_key'
 
 # Database setup
 def init_db():
-    conn = sqlite3.connect('users.db')
-    c = conn.cursor()
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT UNIQUE NOT NULL,
-            email TEXT NOT NULL,
-            password TEXT NOT NULL,
-            phone TEXT NOT NULL
-        )
-    ''')
-    conn.commit()
-    conn.close()
+    try:
+        conn = sqlite3.connect('users.db')
+        c = conn.cursor()
+        c.execute('''
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                username TEXT UNIQUE NOT NULL,
+                email TEXT NOT NULL,
+                password TEXT NOT NULL,
+                phone TEXT NOT NULL
+            )
+        ''')
+        conn.commit()
+    except Exception as e:
+        print("Error initializing database:", e)
+    finally:
+        conn.close()
 
 # Initialize the database
 init_db()
@@ -65,6 +69,7 @@ def signup():
         reconfirm_password = request.form['reconfirm_password']
         phone = request.form['phone']
 
+        # Validate input
         if password != reconfirm_password:
             flash('Passwords do not match!')
             return redirect(url_for('signup'))
@@ -85,21 +90,25 @@ def signup():
             flash('Password must contain at least 8 characters, including an uppercase letter, a number, and a special character!')
             return redirect(url_for('signup'))
 
+        # Insert into database
         try:
             conn = sqlite3.connect('users.db')
             c = conn.cursor()
             c.execute('INSERT INTO users (username, email, password, phone) VALUES (?, ?, ?, ?)',
                       (username, email, password, phone))
             conn.commit()
-            conn.close()
             flash('Successfully created your account!')
             return redirect(url_for('index'))
         except sqlite3.IntegrityError:
             flash('Username already exists. Please try another one.')
             return redirect(url_for('signup'))
+        except Exception as e:
+            flash('An error occurred during signup. Please try again.')
+            print("Error during signup:", e)
+        finally:
+            conn.close()
 
     return render_template('signup.html')
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_post():
@@ -107,11 +116,17 @@ def login_post():
         email = request.form['email']
         password = request.form['password']
 
-        conn = sqlite3.connect('users.db')
-        c = conn.cursor()
-        c.execute('SELECT * FROM users WHERE email = ? AND password = ?', (email, password))
-        user = c.fetchone()
-        conn.close()
+        try:
+            conn = sqlite3.connect('users.db')
+            c = conn.cursor()
+            c.execute('SELECT * FROM users WHERE email = ? AND password = ?', (email, password))
+            user = c.fetchone()
+        except Exception as e:
+            flash('An error occurred during login. Please try again.')
+            print("Error during login:", e)
+            return redirect(url_for('login'))
+        finally:
+            conn.close()
 
         if user:
             flash('Successfully logged in!')
@@ -125,5 +140,6 @@ def login_post():
 @app.route('/main')
 def main_page():
     return render_template('index.html')
+
 if __name__ == '__main__':
-    app.run(port=5001)
+    app.run(port=5000, debug=True)
